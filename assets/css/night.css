@@ -8,3 +8,7 @@ body {
 	color: white;
 	background-color: black;
 }
+
+#hangman svg line {
+	stroke:white;
+}

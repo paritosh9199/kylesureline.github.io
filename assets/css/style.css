@@ -11,6 +11,10 @@ body {
 	-webkit-touch-callout: none;
 }
 
+#hangman svg line {
+	stroke-width:3;
+}
+
 select {
 	font-size: 72px;
 }
