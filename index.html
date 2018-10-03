@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hangman</title>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="" id="day-night-stylesheet">
+<script type="text/javascript" src="assets/js/wordList.min.js">
+</script>
+<script type="text/javascript" src="assets/js/wordBank.min.js">
+</script>
+<script type="text/javascript" src="assets/js/game.js">
+</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="hangman">
+			<span id="guesses"></span>
+		</div>
+		
+		<div id="word">
+		</div>
+		
+		<div id="guess-dropdown">
+			<form name="letters">
+				<select id="select-letter" name="letters" onChange="hangman.guess(this.options[this.selectedIndex].value);">
+				</select>
+			</form>
+		</div>
+		
+		<div id="guessed-letters">
+			<span id="guess-a">A</span>
+			<span id="guess-b">B</span>
+			<span id="guess-c">C</span>
+			<span id="guess-d">D</span>
+			<span id="guess-e">E</span>
+			<span id="guess-f">F</span>
+			<span id="guess-g">G</span>
+			<span id="guess-h">H</span>
+			<span id="guess-i">I</span>
+			<span id="guess-j">J</span>
+			<span id="guess-k">K</span>
+			<span id="guess-l">L</span>
+			<span id="guess-m">M</span>
+			<span id="guess-n">N</span>
+			<span id="guess-o">O</span>
+			<span id="guess-p">P</span>
+			<span id="guess-q">Q</span>
+			<span id="guess-r">R</span>
+			<span id="guess-s">S</span>
+			<span id="guess-t">T</span>
+			<span id="guess-u">U</span>
+			<span id="guess-v">V</span>
+			<span id="guess-w">W</span>
+			<span id="guess-x">X</span>
+			<span id="guess-y">Y</span>
+			<span id="guess-z">Z</span>
+		</div>
+		
+		<div id="new-game">
+			<button onClick="hangman.init();">New Game</button>
+		</div>
+		
+		<div id="day-night">
+			<button id="day-mode" onclick="selectStyle('day');">&#127774;</button>
+			<button id="night-mode" onclick="selectStyle('night');">&#127769;</button>
+		</div>
+	</div>
+</body>
+</html>

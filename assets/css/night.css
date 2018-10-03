@@ -1,0 +1,10 @@
+/* CSS Document */
+
+#night-mode {
+	display: none;
+}
+
+body {
+	color: white;
+	background-color: black;
+}

@@ -1,0 +1,38 @@
+/* CSS Document */
+
+body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	text-align: center;
+	font-size: 48px;
+}
+
+select {
+	font-size: 48px;
+}
+
+#guessed-letters * {
+	display: none;
+}
+
+#guessed-letters {
+	height: 48px;
+}
+
+#day-night {
+	text-align: left;
+}
+
+#day-mode, #night-mode {
+	font-size: 24px;
+	border-radius: 8px;
+}
+
+#day-mode {
+	background-color: white;
+	border-color: black;
+}
+
+#night-mode {
+	background-color: black;
+	border-color: white;
+}
