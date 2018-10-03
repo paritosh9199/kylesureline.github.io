@@ -9,3 +9,7 @@ body {
 	background-color: white;
 }
 
+#hangman svg line {
+	stroke:black;
+	stroke-width:3;
+}
