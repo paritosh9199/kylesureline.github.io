@@ -1,13 +1,15 @@
 /* CSS Document */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	font-size: 48px;
+	font-size: 72px;
 }
 
 select {
-	font-size: 48px;
+	font-size: 72px;
 }
 
 #guessed-letters * {
@@ -25,6 +27,9 @@ select {
 #day-mode, #night-mode {
 	font-size: 24px;
 	border-radius: 8px;
+	height: 48px;
+	width: 48px;
+	margin: 0px;
 }
 
 #day-mode {
