@@ -11,8 +11,17 @@ body {
 	-webkit-touch-callout: none;
 }
 
-select {
+#hangman svg line {
+	stroke-width:4;
+}
+
+select, #new-game button, #guess-input input {
 	font-size: 72px;
+}
+
+#guess-input input {
+	width: 72px;
+	text-align: center;
 }
 
 #guessed-letters * {
@@ -20,7 +29,7 @@ select {
 }
 
 #guessed-letters {
-	height: 48px;
+	height: auto;
 }
 
 #day-night {
@@ -33,6 +42,7 @@ select {
 	height: 48px;
 	width: 48px;
 	margin: 0px;
+	padding: 0px;
 }
 
 #day-mode {
@@ -43,4 +53,13 @@ select {
 #night-mode {
 	background-color: black;
 	border-color: white;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	#day-mode, #night-mode {
+		height: 72px;
+		width: 72px;
+	}
 }

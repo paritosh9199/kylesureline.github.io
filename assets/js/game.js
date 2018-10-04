@@ -31,13 +31,7 @@ var hangman = {
 			}
 		}
 	},
-	guess: function(ltr) {
-		// reset the selected element
-		document.getElementById("select-letter").value="";
-		
-		// delete the previously guessed <select> letter
-		selectList.deleteGuessedLetter(ltr);
-		
+	guess: function(ltr) {				
 		var wrongGuess = 0;
 		
 		for(var t = 0; t < hangman.answer.length; t++ ) {
@@ -54,14 +48,19 @@ var hangman = {
 			hangman.placeGuessesRemaining();
 		}
 		if( hangman.answer == hangman.guessedWordStr() && hangman.guesses > 0) {
-			alert("You win!");
+			hangman.win();
 		} else if(hangman.guesses == 0) {
 			hangman.lose();
 		}
 	},
+	win: function() {
+		alert("You win!");
+		document.getElementById("guess-input").children[0].disabled = true;
+		document.getElementById("new-game").children[0].style.visibility = "visible";
+	},
 	lose: function() {
 		alert("You lose!");
-		document.getElementById("select-letter").disabled = true;
+		document.getElementById("guess-input").children[0].disabled = true;
 		document.getElementById("new-game").children[0].style.visibility = "visible";
 		for(var t = 0; t < hangman.answer.length; t++ ) {
 			document.getElementById("answer-" + t).innerHTML = hangman.answer[t] + " ";
@@ -80,67 +79,30 @@ var hangman = {
 		hangman.placeBlanks();
 		hangman.hideGuessedLetters();
 		document.getElementById("new-game").children[0].style.visibility = "hidden";
-		document.getElementById("select-letter").disabled = false;
-		selectList.init();
+		document.getElementById("guess-input").children[0].disabled = false;
 		selectStyle("day");
 	}
 };
 
-var selectList = {
-	letters: ["a", "b", "c", "d", "e", "f",
-		  "g", "h", "i", "j", "k", "l",
-		  "m", "n", "o", "p", "q", "r",
-		  "s", "t", "u", "v", "w", "x",
-		  "y", "z", ],
-	getIndex: function(ltr) {
-		for( var z = 0; z < 26; z++ ) {
-			if(ltr == selectList.letters[z] ) {
-				return z;
-			}
-		}
-	},
-	init: function() {
-		document.getElementById("select-letter").innerHTML = "";
+function isLetter(str) {
+	return str.length === 1 && str.match(/[a-z]/i);
+}
 
-		selectList.letters = ["a", "b", "c", "d", "e", "f",
+function processInput(ltr) {
+	var l = ltr[0]; // in case of fast typing, grab only first char
+	var abc = ["a", "b", "c", "d", "e", "f",
 		  "g", "h", "i", "j", "k", "l",
 		  "m", "n", "o", "p", "q", "r",
 		  "s", "t", "u", "v", "w", "x",
 		  "y", "z", ];
-		selectList.selectArray = [];
-		
-		var sNode = document.createElement("OPTION");
-		sNode.setAttribute("value", "");
-		var sNodeTextNode = document.createTextNode("Select One");
-		sNode.appendChild(sNodeTextNode);
-		selectList.selectArray.push(sNode);
-		
-		for( var a = 0; a < 26; a++ ) {
-			var currentChar = selectList.letters[a];
-			var ltrNode = document.createElement("OPTION");
-			ltrNode.setAttribute("value", currentChar);
-			var ltrNodeTextNode = document.createTextNode(currentChar.toUpperCase());
-			ltrNode.appendChild(ltrNodeTextNode);
-			selectList.selectArray.push(ltrNode);
+	if(l != undefined) { // fast typing results in undefined
+		if( isLetter(l) ) {
+			l = l.toLowerCase(); // convert to lower case letter
+			hangman.guess(l);
 		}
-		
-		selectList.insertSelectElements();
-	},
-	deleteGuessedLetter: function(ltr) {
-		var i = selectList.getIndex(ltr);
-		selectList.selectArray.splice(i+1, 1);
-		selectList.letters.splice(i, 1);
-		selectList.insertSelectElements();
-	},
-	insertSelectElements: function() {
-		document.getElementById("select-letter").innerHTML = "";
-		for( var u = 0; u < selectList.selectArray.length; u++){
-			document.getElementById("select-letter").appendChild(selectList.selectArray[u]);
-		}
-	},
-	selectArray: [],
-	
-};
+	}
+	document.getElementById("guess-input").children[0].value = "";
+}
 
 function selectStyle(s) {
 	document.getElementById("day-night-stylesheet").setAttribute("href", "assets/css/" + s + ".css");
