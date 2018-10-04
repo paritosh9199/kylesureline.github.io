@@ -40,13 +40,10 @@
 		<div id="word">
 		</div>
 		
-		<div id="guess-dropdown">
-			<form name="letters">
-				<select id="select-letter" name="letters" onChange="hangman.guess(this.options[this.selectedIndex].value);">
-				</select>
-			</form>
+		<div id="guess-input">
+			<input type="text" value="" onKeyUp="processInput(this.value);">
 		</div>
-		
+				
 		<div id="guessed-letters">
 			<span id="guess-a">A</span>
 			<span id="guess-b">B</span>
