@@ -14,7 +14,7 @@ var hangman = {
 		}
 	},
 	placeGuessesRemaining: function() {
-		document.getElementById("guesses").innerHTML = hangman.guesses;
+		//document.getElementById("guesses").innerHTML = hangman.guesses;
 	},
 	placeBlanks: function() {
 		document.getElementById("word").innerHTML = "";
@@ -45,7 +45,7 @@ var hangman = {
 		}
 		if( wrongGuess == hangman.answer.length ) {
 			hangman.guesses--;
-			hangman.placeGuessesRemaining();
+			//hangman.placeGuessesRemaining();
 		}
 		if( hangman.answer == hangman.guessedWordStr() && hangman.guesses > 0) {
 			hangman.win();
@@ -75,7 +75,7 @@ var hangman = {
 	init: function() {
 		hangman.chooseWord();
 		hangman.guesses = 10;
-		hangman.placeGuessesRemaining();
+		//hangman.placeGuessesRemaining();
 		hangman.placeBlanks();
 		hangman.hideGuessedLetters();
 		hangman.guessedWord = [];
