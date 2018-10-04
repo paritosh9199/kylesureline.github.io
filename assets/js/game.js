@@ -78,6 +78,7 @@ var hangman = {
 		hangman.placeGuessesRemaining();
 		hangman.placeBlanks();
 		hangman.hideGuessedLetters();
+		hangman.guessedWord = [];
 		document.getElementById("new-game").children[0].style.visibility = "hidden";
 		document.getElementById("guess-input").children[0].disabled = false;
 		selectStyle("day");
@@ -106,6 +107,11 @@ function processInput(ltr) {
 
 function selectStyle(s) {
 	document.getElementById("day-night-stylesheet").setAttribute("href", "assets/css/" + s + ".css");
+}
+
+function scrollTopFunction() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 window.onload = hangman.init;
