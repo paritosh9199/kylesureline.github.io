@@ -77,8 +77,10 @@ var hangman = {
 	},
 	init: function() {
 		var s = get_cookie("style");
-		if( s != undefined ) {
-			selectStyle(s);	
+		if( s != "" ) {
+			selectStyle(s);
+		} else {
+			selectStyle("day");
 		}
 		document.getElementById("win-lose").style.visibility = "hidden";
 		hangman.chooseWord();
