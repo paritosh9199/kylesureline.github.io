@@ -59,8 +59,8 @@ select, #new-game button, #guess-input input {
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
 	#day-mode, #night-mode {
-		height: 72px;
-		width: 72px;
-		font-size: 60px;
+		height: 96px;
+		width: 96px;
+		font-size: 72px;
 	}
 }
