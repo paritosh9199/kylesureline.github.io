@@ -22,7 +22,7 @@ select, #new-game button, #guess-input input {
 	font-size: 72px;
 }
 #guessed-letters {
-	font-size: 48px;
+	font-size: 60px;
 }
 
 #guess-input input {
