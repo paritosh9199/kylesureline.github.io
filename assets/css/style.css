@@ -61,6 +61,28 @@ select, #new-game button, #guess-input input {
 	border-color: white;
 }
 
+/* ipad portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+	
+}
+/* ipad landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	#word, #guess-input {
+		font-size: 60px;
+	}
+	#guessed-letters {
+		font-size: 48px;
+	}
+	#left-col {
+		width: 30%;
+		float: left;
+	}
+	#right-col {
+		width: 65%;
+		float: right;
+	}
+}
+/* phones */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
