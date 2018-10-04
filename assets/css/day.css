@@ -16,4 +16,5 @@ body {
 #guess-input input {
 	color: black;
 	background-color: white;
+	border-color: black;
 }
