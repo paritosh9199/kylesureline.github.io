@@ -20,6 +20,10 @@
 
 <body>
 	<div id="wrapper">
+		<div id="day-night">
+			<button id="day-mode" onclick="selectStyle('day');">&#127774;</button>
+			<button id="night-mode" onclick="selectStyle('night');">&#127769;</button>
+		</div>
 		<div id="hangman">
 			<svg height="100" width="100">
 				<line x1="5" y1="95" x2="95" y2="95"/>
@@ -75,11 +79,6 @@
 		
 		<div id="new-game">
 			<button onClick="hangman.init();">New Game</button>
-		</div>
-		
-		<div id="day-night">
-			<button id="day-mode" onclick="selectStyle('day');">&#127774;</button>
-			<button id="night-mode" onclick="selectStyle('night');">&#127769;</button>
 		</div>
 	</div>
 </body>

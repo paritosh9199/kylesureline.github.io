@@ -15,8 +15,13 @@ body {
 	stroke-width:4;
 }
 
-select {
+select, #new-game button, #guess-input input {
 	font-size: 72px;
+}
+
+#guess-input input {
+	width: 72px;
+	text-align: center;
 }
 
 #guessed-letters * {
@@ -24,7 +29,7 @@ select {
 }
 
 #guessed-letters {
-	height: 48px;
+	height: auto;
 }
 
 #day-night {

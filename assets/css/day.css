@@ -12,3 +12,8 @@ body {
 #hangman svg line {
 	stroke:black;
 }
+
+#guess-input input {
+	color: black;
+	background-color: white;
+}
