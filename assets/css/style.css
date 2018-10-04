@@ -5,7 +5,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	font-size: 72px;
+	font-size: 96px;
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
@@ -16,11 +16,11 @@ body {
 }
 
 select, #new-game button, #guess-input input {
-	font-size: 72px;
+	font-size: 96px;
 }
 
 #guess-input input {
-	width: 72px;
+	width: 96px;
 	text-align: center;
 }
 
@@ -37,10 +37,10 @@ select, #new-game button, #guess-input input {
 }
 
 #day-mode, #night-mode {
-	font-size: 24px;
+	font-size: 36px;
 	border-radius: 8px;
-	height: 48px;
-	width: 48px;
+	height: 54px;
+	width: 54px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -61,5 +61,6 @@ and (max-device-width : 568px) {
 	#day-mode, #night-mode {
 		height: 72px;
 		width: 72px;
+		font-size: 60px;
 	}
 }
