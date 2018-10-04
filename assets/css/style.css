@@ -5,7 +5,6 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center;
-	font-size: 96px;
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
@@ -16,11 +15,18 @@ body {
 }
 
 select, #new-game button, #guess-input input {
-	font-size: 96px;
+	font-size: 72px;
+}
+
+#word, #guess-input {
+	font-size: 72px;
+}
+#guessed-letters {
+	font-size: 48px;
 }
 
 #guess-input input {
-	width: 96px;
+	width: 72px;
 	text-align: center;
 }
 
