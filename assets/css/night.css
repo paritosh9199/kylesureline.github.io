@@ -18,3 +18,17 @@ body {
 	background-color: black;
 	border-color: white;
 }
+
+#new-game button {
+	background-color: black;
+	color: white;
+	border-color: white;
+}
+
+svg path {
+	stroke: white;
+}
+
+#canvas_background {
+	fill: black;
+}

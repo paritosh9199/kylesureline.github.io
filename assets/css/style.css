@@ -10,10 +10,6 @@ body {
 	-webkit-touch-callout: none;
 }
 
-#hangman svg line {
-	stroke-width:4;
-}
-
 select, #new-game button, #guess-input input {
 	font-size: 72px;
 }
@@ -23,6 +19,11 @@ select, #new-game button, #guess-input input {
 }
 #guessed-letters {
 	font-size: 60px;
+}
+#win-lose {
+	font-size: 20px;
+	padding: 0px;
+	margin: 0px;
 }
 
 #guess-input input {
@@ -44,7 +45,6 @@ select, #new-game button, #guess-input input {
 
 #day-mode, #night-mode {
 	font-size: 36px;
-	border-radius: 8px;
 	height: 54px;
 	width: 54px;
 	margin: 0px;
@@ -54,11 +54,13 @@ select, #new-game button, #guess-input input {
 #day-mode {
 	background-color: white;
 	border-color: black;
+	border-style: groove;
 }
 
 #night-mode {
 	background-color: black;
 	border-color: white;
+	border-style: groove;
 }
 
 /* ipad portrait */
