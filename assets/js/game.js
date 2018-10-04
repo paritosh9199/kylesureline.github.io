@@ -180,6 +180,7 @@ function processInput(ltr) {
 function selectStyle(s) {
 	save_cookies("style", s);
 	document.getElementById("day-night-stylesheet").setAttribute("href", "assets/css/" + s + ".css");
+	document.getElementById("status-bar-meta").setAttribute("content", "black");
 }
 
 function scrollTopFunction() {
