@@ -41,7 +41,7 @@ var hangman = {
 			} else {
 				wrongGuess++;
 			}
-			document.getElementById("guess-" + ltr).style.display = "inline";
+			document.getElementById("guess-" + ltr).style.display = "none";
 		}
 		if( wrongGuess == hangman.answer.length ) {
 			hangman.guesses--;
@@ -69,10 +69,10 @@ var hangman = {
 			document.getElementById("answer-" + t).innerHTML = hangman.answer[t] + " ";
 		}
 	},
-	hideGuessedLetters: function() {
+	showGuessedLetters: function() {
 		var guessedLetterChildren = document.getElementById("guessed-letters").children;
 		for( var i = 0; i < guessedLetterChildren.length; i++ ) {
-			guessedLetterChildren[i].style.display = "none";
+			guessedLetterChildren[i].style.display = "inline";
 		}
 	},
 	init: function() {
@@ -87,7 +87,7 @@ var hangman = {
 		hangman.guesses = 10;
 		//hangman.placeGuessesRemaining();
 		hangman.placeBlanks();
-		hangman.hideGuessedLetters();
+		hangman.showGuessedLetters();
 		hangman.guessedWord = [];
 		document.getElementById("new-game").children[0].style.visibility = "hidden";
 		document.getElementById("guess-input").children[0].disabled = false;

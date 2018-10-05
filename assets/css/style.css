@@ -31,10 +31,6 @@ select, #new-game button, #guess-input input {
 	text-align: center;
 }
 
-#guessed-letters * {
-	display: none;
-}
-
 #guessed-letters {
 	height: auto;
 }
