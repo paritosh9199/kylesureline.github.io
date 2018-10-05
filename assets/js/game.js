@@ -91,6 +91,7 @@ var hangman = {
 		hangman.guessedWord = [];
 		document.getElementById("new-game").children[0].style.visibility = "hidden";
 		document.getElementById("guess-input").children[0].disabled = false;
+		document.getElementById("guess-input").children[0].focus();
 		svgAnimator.draw(hangman.guesses);
 	}
 };
