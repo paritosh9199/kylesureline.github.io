@@ -3,14 +3,19 @@
   "name": "Hangapp",
   "icons": [
     {
-      "src": "touch-icon-ipad-retina.png",
+      "src": "touch-icon-iphone.png",
       "type": "image/png",
-      "sizes": "167x167"
+      "sizes": "114x114"
     },
     {
       "src": "touch-icon-ipad.png",
       "type": "image/png",
       "sizes": "152x152"
+    },
+    {
+      "src": "touch-icon-ipad-retina.png",
+      "type": "image/png",
+      "sizes": "167x167"
     },
     {
       "src": "touch-icon-iphone-retina.png",
@@ -23,9 +28,9 @@
       "sizes": "192x192"
     },
     {
-      "src": "touch-icon-iphone.png",
+      "src": "splash-icon.png",
       "type": "image/png",
-      "sizes": "114x114"
+      "sizes": "512x512"
     }
   ],
   "start_url": "index.html",
