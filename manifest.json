@@ -18,6 +18,11 @@
       "sizes": "180x180"
     },
     {
+      "src": "touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
       "src": "touch-icon-iphone.png",
       "type": "image/png",
       "sizes": "114x114"
