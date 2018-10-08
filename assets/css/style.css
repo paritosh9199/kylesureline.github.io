@@ -40,9 +40,9 @@ body {
 /***************/
 
 #guess-input input {
-	border-left: 0px;
-	border-top: 0px;
-	border-right: 0px;
+	border-left: transparent;
+	border-top: transparent;
+	border-right: transparent;
 	margin: 0px;
 	padding: 0px;
 }
