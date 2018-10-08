@@ -1,4 +1,6 @@
 var hangman = {
+	wins: 0,
+	losses: 0,
 	guesses: 10,
 	answer: "",
 	guessedWord: [],
@@ -72,6 +74,8 @@ var hangman = {
 		document.getElementById("win-lose").style.visibility = "visible";
 		document.getElementById("guess-input").children[0].disabled = true;
 		document.getElementById("new-game").children[0].style.visibility = "visible";
+		hangman.wins++;
+		hangman.saveScore();
 	},
 	lose: function() {
 		document.getElementById("win-lose").innerHTML = "You lose!";
@@ -81,6 +85,17 @@ var hangman = {
 		for(var t = 0; t < hangman.answer.length; t++ ) {
 			document.getElementById("answer-" + t).innerHTML = hangman.answer[t] + " ";
 		}
+		hangman.losses++;
+		hangman.saveScore();
+	},
+	saveScore: function() {
+		save_cookies("wins", hangman.wins);
+		save_cookies("losses", hangman.losses);
+		hangman.printScore();
+	},
+	printScore: function() {
+		document.getElementById("score-wins").innerHTML = "Wins: " + hangman.wins;
+		document.getElementById("score-losses").innerHTML = "Losses: " + hangman.losses;	
 	},
 	showGuessedLetters: function() {
 		var guessedLetterChildren = document.getElementById("guessed-letters").children;
@@ -95,6 +110,20 @@ var hangman = {
 		} else {
 			selectStyle("day");
 		}
+		var w = get_cookie("wins");
+		if( w == "" ) {
+			hangman.wins = 0;
+		} else {
+			hangman.wins = w;
+		}
+		var l = get_cookie("losses");
+		if( l == "" ) {
+			hangman.losses = 0;
+		} else {
+			hangman.losses = l;
+		}
+		hangman.printScore();
+		
 		document.getElementById("win-lose").style.visibility = "hidden";
 		hangman.chooseWord();
 		hangman.guesses = 10;
