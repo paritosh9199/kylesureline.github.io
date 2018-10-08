@@ -12,14 +12,11 @@ body {
 }
 
 /* Sizes */
-#guess-input, #guess-input input {
-	font-size: 2rem;
-}
 #score-losses, #score-wins {
 	font-size: 1rem;
 	padding: 0.25rem;
 }
-#day-night button, #word {
+#day-night button, #word, #guess-input, #guess-input input {
 	font-size: 1.5rem;
 }
 #day-night button {
@@ -91,11 +88,11 @@ body {
 	border-style: groove;
 }
 #left-col {
-	width: 50%;
+	width: 55%;
 	float: left;
 }
 #right-col {
-	width: 50%;
+	width: 45%;
 	float: right;
 }
 
