@@ -8,16 +8,26 @@ body {
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
-	font-size: 16px;
+	font-size: 32px;
 }
 
 /* Sizes */
-#guess-input input {
-	font-size: 2em;
+#guess-input, #guess-input input, #new-game button {
+	font-size: 2rem;
+}
+#win-lose, #day-night button {
+	font-size: 1.5rem;
 }
 #guess-input input {
-	width: 1em;
+	width: 1.75rem;
 }
+#guessed-letters span {
+	font-size: 1.25rem;
+}
+#word span {
+	padding-right: 0.2rem;
+}
+/***************/
 
 #guess-input input {
 	border-left: 0px;
@@ -46,12 +56,11 @@ body {
 	height: auto;
 }
 
-#day-night {
+#day-night, #day-night button {
 	text-align: left;
 	position: absolute;
-}
-
-#day-mode, #night-mode {
+	width: auto;
+	height: auto;
 	margin: 0px;
 	padding: 0px;
 }
