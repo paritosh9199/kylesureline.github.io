@@ -106,7 +106,7 @@ body {
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
 	#hangman #svg-container {
-		width: 100px;
-		height: 100px;
+		width: 50px;
+		height: 50px;
 	}
 }
