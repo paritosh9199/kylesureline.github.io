@@ -17,6 +17,10 @@ body {
 }
 #win-lose, #day-night button {
 	font-size: 1.5rem;
+	line-height: 1.5rem;
+}
+#day-night button {
+	padding: 0.25rem;
 }
 #guess-input input {
 	width: 1.75rem;
@@ -26,9 +30,6 @@ body {
 }
 #word span {
 	padding-right: 0.2rem;
-}
-#hangman {
-
 }
 #hangman #svg-container {
 	width: 200px;
@@ -72,9 +73,7 @@ body {
 	width: auto;
 	height: auto;
 	margin: 0px;
-	padding: 0px;
 }
-
 #day-mode {
 	background-color: white;
 	border-color: black;
