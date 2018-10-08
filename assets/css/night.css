@@ -4,6 +4,10 @@
 	display: none;
 }
 
+#hangman svg {
+	border: 1px solid white;
+}
+
 body {
 	color: white;
 	background-color: black;

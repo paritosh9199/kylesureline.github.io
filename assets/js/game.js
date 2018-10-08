@@ -21,7 +21,7 @@ var hangman = {
 		for( var i = 0; i < hangman.answer.length; i++ ) {
 			var node = document.createElement("SPAN");
 			node.setAttribute("id", "answer-" + i);
-			var textNode = document.createTextNode("_ ");
+			var textNode = document.createTextNode("_");
 			node.appendChild(textNode);
 			if(hangman.answer[i] == " ") {
 				var b = document.createElement("BR");
@@ -36,7 +36,7 @@ var hangman = {
 		
 		for(var t = 0; t < hangman.answer.length; t++ ) {
 			if( ltr === hangman.answer[t] ) {
-				document.getElementById("answer-" + t).innerHTML = ltr + " ";
+				document.getElementById("answer-" + t).innerHTML = ltr;
 				hangman.guessedWord[t] = ltr;
 			} else {
 				wrongGuess++;
