@@ -31,8 +31,7 @@ body {
 	padding-right: 0.2rem;
 }
 #hangman #svg-container {
-	width: 200px;
-	height: 200px;
+	width: 100%;
 	padding: 0px;
 	display: block;
 	margin: auto;
@@ -88,11 +87,11 @@ body {
 	border-style: groove;
 }
 #left-col {
-	width: 30%;
+	width: 35%;
 	float: left;
 }
 #right-col {
-	width: 65%;
+	width: 60%;
 	float: right;
 }
 
@@ -100,8 +99,8 @@ body {
 /* ipad portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
 	#hangman #svg-container {
-		width: 400px;
-		height: 400px;
+		width: 300px;
+		height: 300px;
 	}
 	body {
 		font-size: 54px;
@@ -109,10 +108,6 @@ body {
 }
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	#hangman #svg-container {
-		width: 300px;
-		height: 300px;
-	}
 	body {
 		font-size: 40px;
 	}
@@ -121,10 +116,6 @@ body {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
-	#hangman #svg-container {
-		width: 75px;
-		height: 75px;
-	}
 	body {
 		font-size: 12px;
 	}
