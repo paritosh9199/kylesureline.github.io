@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var CACHE_NAME = 'my-site-cache-v1.1';
+var CACHE_NAME = 'my-site-cache-v1.2';
 var urlsToCache = [
 	'/',
 	'/index.html',

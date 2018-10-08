@@ -27,6 +27,16 @@ body {
 #word span {
 	padding-right: 0.2rem;
 }
+#hangman {
+
+}
+#hangman #svg-container {
+	width: 200px;
+	height: 200px;
+	padding: 0px;
+	display: block;
+	margin: auto;
+}
 /***************/
 
 #guess-input input {
@@ -79,7 +89,6 @@ body {
 
 /* ipad portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
-	
 }
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -96,4 +105,8 @@ body {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
+	#hangman #svg-container {
+		width: 100px;
+		height: 100px;
+	}
 }

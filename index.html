@@ -47,7 +47,8 @@
 				<button id="night-mode" onclick="selectStyle('night');">&#127769;</button>
 			</div>
 			<div id="hangman">
-				<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+				<div id="svg-container">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
 				<g>
 				<rect fill="#fff" id="canvas_background" height="202" width="202" y="-1" x="-1"/>
 				<g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
@@ -67,6 +68,7 @@
 				<path id="svg_0" d="m55.625,77l19.44302,19.44302" stroke-width="3" stroke="#000" fill="none"/>
 				</g>
 				</svg>
+				</div>
 				<p id="win-lose">You lose!</p>
 			</div>
 		</div>
