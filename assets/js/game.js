@@ -1,9 +1,8 @@
-// JavaScript Document
-
 var hangman = {
 	guesses: 10,
 	answer: "",
 	guessedWord: [],
+	guessedLetters: [],
 	guessedWordStr: function() {
 		return hangman.guessedWord.toString().replace(/,/g, '');
 	},
@@ -31,28 +30,42 @@ var hangman = {
 			}
 		}
 	},
+	isGuessedLetter: function(ltr) {
+		for( var u = 0; u < hangman.guessedLetters.length; u++ ) {
+			if( ltr == hangman.guessedLetters[u] ) {
+				return true;
+			}
+		}
+		return false;
+	},
 	guess: function(ltr) {				
 		var wrongGuess = 0;
 		
-		for(var t = 0; t < hangman.answer.length; t++ ) {
-			if( ltr === hangman.answer[t] ) {
-				document.getElementById("answer-" + t).innerHTML = ltr;
-				hangman.guessedWord[t] = ltr;
-			} else {
-				wrongGuess++;
+		if( hangman.isGuessedLetter(ltr) ) {
+			// do nothing. already guessed that.
+		} else {
+			hangman.guessedLetters.push(ltr);
+			for(var t = 0; t < hangman.answer.length; t++ ) {
+				if( ltr === hangman.answer[t] ) {
+					document.getElementById("answer-" + t).innerHTML = ltr;
+					hangman.guessedWord[t] = ltr;
+				} else {
+					wrongGuess++;
+				}
+				document.getElementById("guess-" + ltr).style.display = "none";
 			}
-			document.getElementById("guess-" + ltr).style.display = "none";
+			if( wrongGuess == hangman.answer.length ) {
+				hangman.guesses--;
+				svgAnimator.draw(hangman.guesses);
+				//hangman.placeGuessesRemaining();
+			}
+			if( hangman.answer == hangman.guessedWordStr() && hangman.guesses > 0) {
+				hangman.win();
+			} else if(hangman.guesses == 0) {
+				hangman.lose();
+			}
 		}
-		if( wrongGuess == hangman.answer.length ) {
-			hangman.guesses--;
-			svgAnimator.draw(hangman.guesses);
-			//hangman.placeGuessesRemaining();
-		}
-		if( hangman.answer == hangman.guessedWordStr() && hangman.guesses > 0) {
-			hangman.win();
-		} else if(hangman.guesses == 0) {
-			hangman.lose();
-		}
+		
 	},
 	win: function() {
 		document.getElementById("win-lose").innerHTML = "You win!";
@@ -85,10 +98,10 @@ var hangman = {
 		document.getElementById("win-lose").style.visibility = "hidden";
 		hangman.chooseWord();
 		hangman.guesses = 10;
-		//hangman.placeGuessesRemaining();
 		hangman.placeBlanks();
 		hangman.showGuessedLetters();
 		hangman.guessedWord = [];
+		hangman.guessedLetters = [];
 		document.getElementById("new-game").children[0].style.visibility = "hidden";
 		document.getElementById("guess-input").children[0].disabled = false;
 		document.getElementById("guess-input").children[0].focus();
