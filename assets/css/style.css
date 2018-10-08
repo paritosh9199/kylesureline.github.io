@@ -8,16 +8,23 @@ body {
 	-webkit-user-select: none;
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
+	font-size: 16px;
 }
 
-select, #new-game button, #guess-input input {
-	font-size: 60px;
+/* Sizes */
+#guess-input input {
+	font-size: 2em;
+}
+#guess-input input {
+	width: 1em;
 }
 
 #guess-input input {
 	border-left: 0px;
 	border-top: 0px;
 	border-right: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 #guess-input input:focus {
 	border-left-color: transparent;
@@ -25,21 +32,13 @@ select, #new-game button, #guess-input input {
 	border-right-color: transparent;
 	outline: 0;
 }
-#word, #guess-input {
-	font-size: 72px;
-}
-#guessed-letters {
-	font-size: 48px;
-}
 #win-lose {
-	font-size: 40px;
 	padding: 0px;
 	margin: 0px;
 	font-style: italic;
 }
 
 #guess-input input {
-	width: 72px;
 	text-align: center;
 }
 
@@ -53,9 +52,6 @@ select, #new-game button, #guess-input input {
 }
 
 #day-mode, #night-mode {
-	font-size: 36px;
-	height: 54px;
-	width: 54px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -78,12 +74,6 @@ select, #new-game button, #guess-input input {
 }
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	#word, #guess-input {
-		font-size: 52px;
-	}
-	#guessed-letters {
-		font-size: 40px;
-	}
 	#left-col {
 		width: 30%;
 		float: left;
@@ -97,9 +87,4 @@ select, #new-game button, #guess-input input {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
-	#day-mode, #night-mode {
-		height: 96px;
-		width: 96px;
-		font-size: 72px;
-	}
 }
