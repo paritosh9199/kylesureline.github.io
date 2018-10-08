@@ -1,4 +1,4 @@
-const CACHE_NAME = 'static-v0.2';
+const CACHE_NAME = 'static-v0.3';
 
 var urlsToCache = [
 	'/',
