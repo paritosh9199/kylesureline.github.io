@@ -88,19 +88,34 @@ body {
 	border-color: white;
 	border-style: groove;
 }
+#left-col {
+	width: 30%;
+	float: left;
+}
+#right-col {
+	width: 65%;
+	float: right;
+}
+
 
 /* ipad portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
+	#hangman #svg-container {
+		width: 75px;
+		height: 75px;
+	}
+	body {
+		font-size: 18px;
+	}
 }
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	#left-col {
-		width: 30%;
-		float: left;
+	#hangman #svg-container {
+		width: 60px;
+		height: 60px;
 	}
-	#right-col {
-		width: 65%;
-		float: right;
+	body {
+		font-size: 14px;
 	}
 }
 /* phones */
