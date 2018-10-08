@@ -99,19 +99,9 @@ body {
 
 /* ipad portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
-	body {
-		font-size: 20px;
-	}
 }
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-	#hangman #svg-container {
-		width: 150px;
-		height: 150px;
-	}
-	body {
-		font-size: 16px;
-	}
 }
 /* phones */
 @media only screen 
