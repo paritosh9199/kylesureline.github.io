@@ -51,7 +51,8 @@ body {
 	border-left-color: transparent;
 	border-top-color: transparent;
 	border-right-color: transparent;
-	outline: 0;
+	outline: none;
+	box-shadow: none;
 }
 #win-lose {
 	padding: 0px;
@@ -73,6 +74,9 @@ body {
 	width: auto;
 	height: auto;
 	margin: 0px;
+}
+#day-night button {
+	border-radius: 0px;
 }
 #day-mode {
 	background-color: white;
