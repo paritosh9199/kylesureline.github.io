@@ -100,8 +100,8 @@ body {
 /* ipad portrait */
 @media (min-width: 768px) and (max-width: 1024px) {
 	#hangman #svg-container {
-		width: 100px;
-		height: 100px;
+		width: 150px;
+		height: 150px;
 	}
 	body {
 		font-size: 18px;
@@ -110,8 +110,8 @@ body {
 /* ipad landscape */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 	#hangman #svg-container {
-		width: 75px;
-		height: 75px;
+		width: 100px;
+		height: 100px;
 	}
 	body {
 		font-size: 14px;
@@ -122,8 +122,8 @@ body {
 and (min-device-width : 320px) 
 and (max-device-width : 568px) {
 	#hangman #svg-container {
-		width: 60px;
-		height: 60px;
+		width: 75px;
+		height: 75px;
 	}
 	body {
 		font-size: 12px;
