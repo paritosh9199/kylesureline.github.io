@@ -12,7 +12,7 @@ body {
 }
 
 /* Sizes */
-#guess-input, #guess-input input, #new-game button {
+#guess-input, #guess-input input {
 	font-size: 2rem;
 }
 #win-lose, #day-night button, #word {
@@ -24,7 +24,7 @@ body {
 #guess-input input {
 	width: 1.75rem;
 }
-#guessed-letters span {
+#guessed-letters span, #new-game button {
 	font-size: 1.25rem;
 }
 #word span {
