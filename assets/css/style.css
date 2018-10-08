@@ -15,9 +15,8 @@ body {
 #guess-input, #guess-input input, #new-game button {
 	font-size: 2rem;
 }
-#win-lose, #day-night button {
+#win-lose, #day-night button, #word {
 	font-size: 1.5rem;
-	line-height: 1.5rem;
 }
 #day-night button {
 	padding: 0.25rem;
